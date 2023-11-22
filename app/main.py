@@ -5,4 +5,5 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Nayan, Congratulations on your first deployment on EC2."}
+    return {"Hello": "Nayan and Megha, Congratulations on your first deployment through ci/cd pipeline using gitactions on EC2.",
+           "Thankyou Note": "Thanks to KANAK who adviced us to do it :)"}
