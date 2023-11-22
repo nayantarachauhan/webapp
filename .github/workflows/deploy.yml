@@ -34,6 +34,12 @@ jobs:
         aws-secret-access-key: q212HLOhOUHMu84nReBwd2Fote9huRhDvvXCf24G
         aws-region: us-east-2
 
+    - name: Docker Login
+      uses: docker/login-action@v1
+      with:
+        username: nayantara52
+        password: Vkssann@2805
+
     - name: pull image to ec2
       run: |
         docker pull nayantara52/nayan-docker-images:v1 
