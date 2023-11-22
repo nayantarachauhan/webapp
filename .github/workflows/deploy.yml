@@ -43,7 +43,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i ./ec2-key-pair.pem ec2-user@ec2-3-15-155-24.us-east-2.compute.amazonaws.com "sudo docker pull nayantara52/nayan-docker-images:v1"
     - name: Run Image on EC2
       run: |
-        ssh -o StrictHostKeyChecking=no -i ./ec2-key-pair.pem ec2-user@ec2-3-15-155-24.us-east-2.compute.amazonaws.com "sudo docker run -d -p 80:80 nayantara52/nayan-docker-images:v1"
+        ssh -o StrictHostKeyChecking=no -i ./ec2-key-pair.pem ec2-user@ec2-3-15-155-24.us-east-2.compute.amazonaws.com "sudo docker run -d -p 8024:80 nayantara52/nayan-docker-images:v1"
 
     
 
