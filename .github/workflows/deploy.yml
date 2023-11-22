@@ -36,11 +36,11 @@ jobs:
 
     - name: pull image to ec2
       run: |
-        docker pull nayantara52/nayan-docker-images:v1 
+        sudo docker pull nayantara52/nayan-docker-images:v1 
 
     - name: run image
       run: |
-        docker run -d -p 80:80 nayantara52/nayan-docker-images:v1
+        sudo docker run -d -p 80:80 nayantara52/nayan-docker-images:v1
 
 
 
