@@ -33,6 +33,10 @@ jobs:
         aws-access-key-id: AKIARWAZI6BRA2BMG36N
         aws-secret-access-key: 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
         aws-region: us-east-2
+
+    - name : change mode
+      run : |
+        chmod 600 ./ec2-key-pair.pem
       
     - name: pull image to ec2
       run: |
