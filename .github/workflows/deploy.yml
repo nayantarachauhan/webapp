@@ -33,21 +33,15 @@ jobs:
         aws-access-key-id: AKIARWAZI6BRA2BMG36N
         aws-secret-access-key: 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
         aws-region: us-east-2
-    
-    - name : check pwd
-      run : |
-        mkdir new
       
-
     - name: pull image to ec2
       run: |
-        docker pull nayantara52/nayan-docker-images:v1 
-
-    - name: run image
+        ssh -o StrictHostKeyChecking=no -i ./ec2-key-pair.pem ec2-user@ec2-3-15-155-24.us-east-2.compute.amazonaws.com "docker pull nayantara52/nayan-docker-images:v1"
+    - name: Run Image on EC2
       run: |
-        docker run -d -p 80:80 nayantara52/nayan-docker-images:v1
+        ssh -o StrictHostKeyChecking=no -i ./ec2-key-pair.pem ec2-user@ec2-3-15-155-24.us-east-2.compute.amazonaws.com "docker run -d -p 80:80 nayantara52/nayan-docker-images:v1"
 
-
+    
 
     
 
