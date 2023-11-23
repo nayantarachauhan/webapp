@@ -17,8 +17,8 @@ jobs:
     - name: Docker Login
       uses: docker/login-action@v1
       with:
-        username: nayantara52
-        password: Vkssann@2805
+        username: na
+        password: na
 
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
@@ -30,8 +30,8 @@ jobs:
     - name: AWS Login
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: AKIARWAZI6BRA2BMG36N
-        aws-secret-access-key: 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
+        aws-access-key-id: na
+        aws-secret-access-key: na
         aws-region: us-east-2
 
     - name : change mode
